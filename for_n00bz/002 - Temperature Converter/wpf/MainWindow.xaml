@@ -1,0 +1,31 @@
+﻿<Window x:Class="TemperatureConverter.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TemperatureConverter"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+        WindowStyle="ToolWindow"
+        Title="Temperature Converter" Height="150" Width="400">
+    <Grid>
+        <StackPanel>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <TextBox Name="value_From" Height="25" Width="75" SelectionBrush="Blue" FontSize="18" PreviewTextInput="NumberValidationTextBox"/>
+                <ComboBox Name="tempScales_From" Height="25"  Margin="5,0,0,0" SelectedIndex="0">
+                    <TextBlock>C</TextBlock>
+                    <TextBlock>F</TextBlock>
+                    <TextBlock>K</TextBlock>
+                </ComboBox>
+                <Label Margin="0,0,0,0" FontSize="18">=</Label >
+                <TextBlock Name="value_To" Height="25" Width="75" Background="AliceBlue" FontSize="18"/>
+                <ComboBox Name="tempScales_To" Height="25" Margin="5,0,0,0" SelectedIndex="1">
+                    <TextBlock>C</TextBlock>
+                    <TextBlock>F</TextBlock>
+                    <TextBlock>K</TextBlock>
+                </ComboBox>
+            </StackPanel>
+            <Button Background="Green" Content="Convert" Width="100" Height="30" Click="convertButton_Click" Margin="0,5,0,0"/>
+        </StackPanel>
+    </Grid>
+</Window>
