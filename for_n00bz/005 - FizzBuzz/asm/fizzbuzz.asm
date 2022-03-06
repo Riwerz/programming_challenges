@@ -59,8 +59,7 @@ _main PROC
 			invoke printf, OFFSET fmt_fizzbuzz, OFFSET FIZZBUZZ, eax
 			jmp _restore_counter
 
-		_digit:
-			;mov ecx, ebx	
+		_digit:	
 			invoke printf, OFFSET fmt_digit, ecx, eax
 		
 		_restore_counter:
